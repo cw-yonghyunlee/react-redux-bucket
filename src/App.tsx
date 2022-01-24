@@ -1,10 +1,10 @@
 import React from 'react';
-import ItemCard from '@components/itemCard';
+import ShoppingList from '@components/ShoppingList';
 
 function App(): JSX.Element {
   return (
     <div className="App">
-      <ItemCard />
+      <ShoppingList />
     </div>
   );
 }
