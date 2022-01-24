@@ -10,5 +10,5 @@ const Template: ComponentStory<typeof NumberInput> = (args) => <NumberInput {...
 
 export const Default = Template.bind({});
 Default.args = {
-  initialValue: 0,
+  value: 0,
 }
