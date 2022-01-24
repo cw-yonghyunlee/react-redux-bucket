@@ -79,13 +79,36 @@ button.default:hover {
     background-color: #383838;
 }
 
+input.number {
+    display: flex;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: none;
+}
+
+input.number:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .add-basket {
+    padding: 5px 10px 5px 10px;
     border: 1px solid #DADADA;
     border-radius: 10px;
-    width: 80%;
     height: 35px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+}
+
+.add-basket > button.default {
+    margin-left: 10px;
 }
