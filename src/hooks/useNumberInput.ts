@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 export default function useNumberInput(initialValue = 0): [
   number,
@@ -9,32 +9,32 @@ export default function useNumberInput(initialValue = 0): [
 ] {
   const [ value, setValue ] = useState<number>(initialValue);
 
-  const plus = (): void => {
+  const plus = useCallback((): void => {
     setValue(value + 1);
-  }
+  }, [value]);
 
-  const minus = (): void => {
+  const minus = useCallback((): void => {
     if (value <= 0) {
       return;
     }
     setValue(value - 1);
-  }
+  }, [value]);
 
-  const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const onChange: React.ChangeEventHandler<HTMLInputElement> = useCallback((e) => {
     const numberValue = parseInt(e.target.value);
     if (numberValue < 0) {
       setValue(0);
       return;
     }
     setValue(numberValue);
-  }
+  }, []);
 
-  const onBlur: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const onBlur: React.ChangeEventHandler<HTMLInputElement> = useCallback((e) => {
     if (e.target.value !== '') {
       return;
     }
     setValue(0);
-  }
+  }, []);
 
   return [
     value,
