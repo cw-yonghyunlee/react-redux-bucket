@@ -86,7 +86,7 @@ button.default:hover {
     background-color: #383838;
 }
 
-input.number {
+input[type='number'] {
     display: flex;
     width: 50px;
     height: 30px;
@@ -94,7 +94,7 @@ input.number {
     border: none;
 }
 
-input.number:focus {
+input[type='number']:focus {
     outline: none;
 }
 

@@ -1,5 +1,5 @@
 import Button from '@atoms/Button';
-import NumberInput from '@atoms/NumberInput';
+import Input from '@atoms/Input';
 import useNumberInput from '@hooks/useNumberInput';
 
 function AddBasketForm(): JSX.Element {
@@ -8,7 +8,7 @@ function AddBasketForm(): JSX.Element {
   return (
     <form className="add-basket">
       <Button type="circle" onClick={plus}>+</Button>
-      <NumberInput value={value} onChange={onChange} onBlur={onBlur} />
+      <Input type="number" value={value} onChange={onChange} onBlur={onBlur} />
       <Button type="circle" onClick={minus}>-</Button>
       <Button type="default">Add Cart</Button>
     </form>
