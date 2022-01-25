@@ -23,7 +23,7 @@ html, body {
 img {
     display: flex;
     object-fit: contain;
-    width: 100%;
+    width: 300px;
     height: 300px;
 }
 
