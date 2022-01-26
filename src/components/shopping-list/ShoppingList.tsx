@@ -1,15 +1,17 @@
 import Img from '@atoms/Img';
 import image from '@images/apple.jpeg';
 import Card from '@atoms/Card';
-import AddBasketForm from '@components/AddBasketForm';
+import AddCartForm from '@components/shopping-list/AddCartForm';
+import Cart from '@components/cart/Cart';
 
 function ShoppingList(): JSX.Element {
   return (
     <div className="shopping-list">
       <Card>
-        <Img src={image} />
-        <AddBasketForm />
+        <Img width={300} height={300} src={image} />
+        <AddCartForm />
       </Card>
+      <Cart />
     </div>
   )
 }

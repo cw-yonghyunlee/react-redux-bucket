@@ -23,8 +23,26 @@ html, body {
 img {
     display: flex;
     object-fit: contain;
-    width: 300px;
-    height: 300px;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-size: 15px;
+    margin: 0 5px 0 0;
 }
 
 .item-card {
@@ -118,4 +136,26 @@ input::-webkit-inner-spin-button {
 
 .add-basket > button.default {
     margin-left: 10px;
+}
+
+.basket {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+.basket > button {
+    margin-top: 10px;
+}
+
+.number-input-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
