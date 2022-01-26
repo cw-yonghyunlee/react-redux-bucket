@@ -1,5 +1,5 @@
 import React from 'react';
-import ShoppingList from '@components/ShoppingList';
+import ShoppingList from '@components/shopping-list/ShoppingList';
 
 function App(): JSX.Element {
   return (

@@ -1,12 +1,13 @@
 interface ImageProps {
   src: string;
+  width?: number;
+  height?: number;
   alt?: string;
 }
 
 function Img(props: ImageProps): JSX.Element {
-  const { src, alt } = props;
   return (
-    <img src={src} alt={alt}/>
+    <img {...props} />
   )
 }
 
