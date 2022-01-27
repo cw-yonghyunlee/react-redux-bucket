@@ -15,7 +15,7 @@ function CartItem(props: CartItemProps): JSX.Element {
 
   return (
     <li>
-      <p>{itemId}</p>
+      <p className="cart-item-label">{itemId}</p>
       <Img alt="cart item" width={50} height={50} src={imageSrc} />
       <div className="number-input-container">
         <Button type="circle" onClick={plus}>+</Button>

@@ -30,6 +30,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/alt-text': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
   ignorePatterns: ['craco.config.js', '**/*.stories.tsx'],
 };

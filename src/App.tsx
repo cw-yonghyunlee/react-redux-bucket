@@ -1,10 +1,11 @@
 import React from 'react';
 import ShoppingList from '@components/shopping-list/ShoppingList';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import rootReducer from './reducers';
+import { insertProducts } from './actions/products';
+import products from './mock/products';
+import store from './store';
 
-const store = createStore(rootReducer);
+store.dispatch(insertProducts(products));
 
 function App(): JSX.Element {
   return (
