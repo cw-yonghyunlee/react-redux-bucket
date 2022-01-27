@@ -23,7 +23,18 @@ function insertItemInCart(state: CartType, item: CartItem) {
   return [...state, item];
 }
 
-function cartReducer(state: CartType = initialState.cart, action: CartAction) {
+function updateQuantityItemInCart(state: CartType, itemId: string, quantity: number) {
+  const cart: CartType = JSON.parse(JSON.stringify(state));
+  const targetItem = cart.find((cartItem) => cartItem.id === itemId);
+  if (targetItem) {
+    targetItem.quantity = quantity;
+    return cart;
+  }
+
+  return state;
+}
+
+function cartReducer(state: CartType = initialState.cart, action: CartAction): CartType {
   switch (action.type) {
     case INSERT_ITEM_IN_CART:
       if (!action.payload) {
@@ -36,10 +47,7 @@ function cartReducer(state: CartType = initialState.cart, action: CartAction) {
       if (!action.payload) {
         return state;
       }
-      return [
-        ...state,
-        action.payload,
-      ];
+      return updateQuantityItemInCart(state, action.payload.id, action.payload.quantity);
     default:
       return state;
   }
