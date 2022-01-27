@@ -1,16 +1,17 @@
 import { Products } from '@root/types';
-import image from '@images/apple.jpeg';
+import appleImage from '@images/apple.jpeg';
+import bananaImage from '@images/banana.png';
 
 const mockProducts: Products = [
   {
     id: '1',
-    quantity: 5,
-    imageSrc: image,
+    quantity: 15,
+    imageSrc: appleImage,
   },
   {
     id: '2',
     quantity: 20,
-    imageSrc: image,
+    imageSrc: bananaImage,
   },
 ];
 
