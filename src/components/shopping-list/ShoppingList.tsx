@@ -13,7 +13,7 @@ function ShoppingList(): JSX.Element {
     <Card key={product.id}>
       <Img alt="products" width={300} height={300} src={image} />
       <p>quantity : {product.quantity}</p>
-      <AddCartForm />
+      <AddCartForm product={product} />
     </Card>
   ));
 

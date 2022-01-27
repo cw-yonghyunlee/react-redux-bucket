@@ -6,8 +6,8 @@ export interface Item {
 
 export type Products = Item[];
 export type CartItem = Item;
-export type Cart = CartItem[];
+export type CartType = CartItem[];
 export interface AppState {
-  cart: Cart;
+  cart: CartType;
   product: Products;
 }

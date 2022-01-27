@@ -7,6 +7,11 @@ const mockProducts: Products = [
     quantity: 5,
     imageSrc: image,
   },
+  {
+    id: '2',
+    quantity: 20,
+    imageSrc: image,
+  },
 ];
 
 export default mockProducts;

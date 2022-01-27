@@ -1,12 +1,15 @@
 import React, { useCallback, useState } from 'react';
 
-export default function useNumberInput(initialValue = 0): [
-  number,
-  () => void,
-  () => void,
-  React.ChangeEventHandler<HTMLInputElement>,
-  React.FocusEventHandler<HTMLInputElement>,
-] {
+interface UseNumberInputType {
+  value: number,
+  plus: () => void,
+  minus: () => void,
+  setValue: (v: number) => void,
+  onChange: React.ChangeEventHandler<HTMLInputElement>,
+  onBlur: React.FocusEventHandler<HTMLInputElement>,
+}
+
+export default function useNumberInput(initialValue = 0): UseNumberInputType {
   const [value, setValue] = useState<number>(initialValue);
 
   const plus = useCallback((): void => {
@@ -36,11 +39,12 @@ export default function useNumberInput(initialValue = 0): [
     setValue(0);
   }, []);
 
-  return [
+  return {
     value,
     plus,
     minus,
+    setValue,
     onChange,
     onBlur,
-  ];
+  };
 }
