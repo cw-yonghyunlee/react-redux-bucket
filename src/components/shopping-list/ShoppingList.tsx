@@ -8,7 +8,7 @@ function ShoppingList(): JSX.Element {
   return (
     <div className="shopping-list">
       <Card>
-        <Img width={300} height={300} src={image} />
+        <Img alt="products" width={300} height={300} src={image} />
         <AddCartForm />
       </Card>
       <Cart />
