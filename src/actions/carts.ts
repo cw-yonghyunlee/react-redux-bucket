@@ -3,7 +3,7 @@ import store from '@root/store';
 import { CartItem } from '../types';
 
 export const INSERT_ITEM_IN_CART = 'INSERT_ITEM_IN_CART' as const;
-export const DELETE_ITEM_IN_CART = 'DELETE_ITEM_IN_CART' as const;
+export const RESET_CART = 'RESET_CART' as const;
 export const UPDATE_QUANTITY_ITEM_IN_CART = 'UPDATE_QUANTITY_ITEM_IN_CART' as const;
 
 export function unSafeInsertCartItem(item: CartItem): CartAction {
@@ -32,10 +32,16 @@ export function updateQuantityCartItem(item: CartItem): CartAction {
   };
 }
 
+export function resetCart(): CartAction {
+  return {
+    type: RESET_CART,
+  };
+}
+
 type ActionTypes = typeof INSERT_ITEM_IN_CART
-  | typeof DELETE_ITEM_IN_CART
+  | typeof RESET_CART
   | typeof UPDATE_QUANTITY_ITEM_IN_CART;
 
 export interface CartAction extends Action<ActionTypes> {
-  payload: CartItem;
+  payload?: CartItem;
 }

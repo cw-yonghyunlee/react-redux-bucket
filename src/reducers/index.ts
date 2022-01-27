@@ -3,7 +3,7 @@ import {
   AppState, CartItem, CartType, Products,
 } from '../types';
 import {
-  CartAction, DELETE_ITEM_IN_CART, INSERT_ITEM_IN_CART, UPDATE_QUANTITY_ITEM_IN_CART,
+  CartAction, INSERT_ITEM_IN_CART, RESET_CART, UPDATE_QUANTITY_ITEM_IN_CART,
 } from '../actions/carts';
 import { INSERT_PRODUCTS, InsertProductsAction, UPDATE_QUANTITY_PRODUCT } from '../actions/products';
 
@@ -26,10 +26,16 @@ function insertItemInCart(state: CartType, item: CartItem) {
 function cartReducer(state: CartType = initialState.cart, action: CartAction) {
   switch (action.type) {
     case INSERT_ITEM_IN_CART:
+      if (!action.payload) {
+        return state;
+      }
       return insertItemInCart(state, action.payload);
-    case DELETE_ITEM_IN_CART:
-      return state.filter((item) => item.id !== action.payload.id);
+    case RESET_CART:
+      return [];
     case UPDATE_QUANTITY_ITEM_IN_CART:
+      if (!action.payload) {
+        return state;
+      }
       return [
         ...state,
         action.payload,
