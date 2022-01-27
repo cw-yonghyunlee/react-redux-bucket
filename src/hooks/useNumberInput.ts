@@ -7,7 +7,7 @@ export default function useNumberInput(initialValue = 0): [
   React.ChangeEventHandler<HTMLInputElement>,
   React.FocusEventHandler<HTMLInputElement>,
 ] {
-  const [ value, setValue ] = useState<number>(initialValue);
+  const [value, setValue] = useState<number>(initialValue);
 
   const plus = useCallback((): void => {
     setValue(value + 1);
@@ -21,7 +21,7 @@ export default function useNumberInput(initialValue = 0): [
   }, [value]);
 
   const onChange: React.ChangeEventHandler<HTMLInputElement> = useCallback((e) => {
-    const numberValue = parseInt(e.target.value);
+    const numberValue = parseInt(e.target.value, 10);
     if (numberValue < 0) {
       setValue(0);
       return;

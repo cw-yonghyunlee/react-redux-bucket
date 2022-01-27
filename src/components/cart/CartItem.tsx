@@ -1,4 +1,4 @@
-import Img from "@components/atoms/Img";
+import Img from '@components/atoms/Img';
 import Button from '@atoms/Button';
 import Input from '@atoms/Input';
 import useNumberInput from '@hooks/useNumberInput';
@@ -11,7 +11,7 @@ interface CartItemProps {
 
 function CartItem(props: CartItemProps): JSX.Element {
   const { itemId, imageSrc, initialQuantity } = props;
-  const [ value, plus, minus, onChange, onBlur ] = useNumberInput(initialQuantity);
+  const [value, plus, minus, onChange, onBlur] = useNumberInput(initialQuantity);
 
   return (
     <li>
@@ -23,7 +23,7 @@ function CartItem(props: CartItemProps): JSX.Element {
         <Button type="circle" onClick={minus}>-</Button>
       </div>
     </li>
-  )
+  );
 }
 
 export default CartItem;

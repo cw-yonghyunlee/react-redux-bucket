@@ -12,7 +12,7 @@ function Cart(): JSX.Element {
       </ul>
       <Button type="default">buy</Button>
     </article>
-  )
+  );
 }
 
 export default Cart;

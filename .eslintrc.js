@@ -27,6 +27,9 @@ module.exports = {
     '@typescript-eslint/default-param-last': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/alt-text': 'off',
   },
-  ignorePatterns: ['craco.config.js'],
+  ignorePatterns: ['craco.config.js', '**/*.stories.tsx'],
 };

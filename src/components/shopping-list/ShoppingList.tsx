@@ -13,7 +13,7 @@ function ShoppingList(): JSX.Element {
       </Card>
       <Cart />
     </div>
-  )
+  );
 }
 
 export default ShoppingList;

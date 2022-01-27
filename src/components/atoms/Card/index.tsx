@@ -10,7 +10,7 @@ function Card(props: CardProps): JSX.Element {
     <article className="item-card">
       { children }
     </article>
-  )
+  );
 }
 
 export default Card;

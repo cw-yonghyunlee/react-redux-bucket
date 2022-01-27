@@ -3,7 +3,7 @@ import Input from '@atoms/Input';
 import useNumberInput from '@hooks/useNumberInput';
 
 function AddCartForm(): JSX.Element {
-  const [ value, plus, minus, onChange, onBlur ] = useNumberInput(0);
+  const [value, plus, minus, onChange, onBlur] = useNumberInput(0);
 
   return (
     <form className="add-basket">
@@ -12,7 +12,7 @@ function AddCartForm(): JSX.Element {
       <Button type="circle" onClick={minus}>-</Button>
       <Button type="default">Add Cart</Button>
     </form>
-  )
+  );
 }
 
 export default AddCartForm;
