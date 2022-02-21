@@ -10,7 +10,7 @@ interface NumberInputProps {
 function Input(props: NumberInputProps): JSX.Element {
   return (
     <input {...props} />
-  )
+  );
 }
 
 export default Input;

@@ -10,7 +10,7 @@ function Button(props: CircleButtonProps): JSX.Element {
   const { children, onClick, type = 'default' } = props;
   return (
     <button type="button" className={type} onClick={onClick}>{children}</button>
-  )
+  );
 }
 
 export default Button;

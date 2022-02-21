@@ -42,7 +42,11 @@ li {
 
 p {
     font-size: 15px;
-    margin: 0 5px 0 0;
+    margin: 0;
+}
+
+p.cart-item-label {
+    margin-right: 5px;
 }
 
 .item-card {
@@ -131,7 +135,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .add-basket > button.default {
@@ -148,6 +152,8 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     padding: 10px;
     width: 300px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
 
 .basket > button {
